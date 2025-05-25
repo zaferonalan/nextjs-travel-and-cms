@@ -3,7 +3,6 @@ import {
   Instagram,
   MessageCircle,
   Phone,
-  Search,
   Twitter,
   User,
 } from "lucide-react";
@@ -12,6 +11,7 @@ import Link from "next/link";
 import React from "react";
 import { navigationLinks } from "../../../../constants/navigationLinks";
 import MobileMenu from "./MobileMenu";
+import SearchPage from "./Search";
 
 const Header = () => {
   const socialMedia = [
@@ -69,9 +69,7 @@ const Header = () => {
             </nav>
 
             <div className="flex items-center space-x-4">
-              <div className="p-3 hidden lg:flex bg-orange-500 rounded-full text-white cursor-pointer">
-                <Search/>
-              </div>              
+              <SearchPage/>            
               <div className="p-3 bg-sky-500 rounded-full text-white cursor-pointer">
                 <User/>
               </div>
