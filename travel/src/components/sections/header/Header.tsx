@@ -1,7 +1,6 @@
 import {
   Facebook,
   Instagram,
-  Menu,
   MessageCircle,
   Phone,
   Search,
@@ -11,6 +10,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { navigationLinks } from "../../../../constants/navigationLinks";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const socialMedia = [
@@ -19,14 +20,7 @@ const Header = () => {
     { href: "#", icon: <Facebook size={16} /> },
   ];
 
-  const navigationLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/hotels", label: "Hotel" },
-    { href: "/trips", label: "Trip" },
-    { href: "/rent-a-cars", label: "Rent a car" },
-    { href: "/contack", label: "Contack" },
-  ]
+
 
   return (
     <header className="bg-black text-white">
@@ -77,13 +71,12 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <div className="p-3 hidden lg:flex bg-orange-500 rounded-full text-white cursor-pointer">
                 <Search/>
-              </div>
-              <div className="p-3 bg-orange-500 rounded-full text-white cursor-pointer">
-                <Menu/>
-              </div>
+              </div>              
               <div className="p-3 bg-sky-500 rounded-full text-white cursor-pointer">
                 <User/>
               </div>
+              {/* MobilMenu */}
+              <MobileMenu/>
             </div>
           </div>
         </div>

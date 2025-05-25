@@ -4,6 +4,7 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { navigationLinks } from "../../../../constants/navigationLinks";
 
 const Footer = () => {
   const socialMedia = [
@@ -12,14 +13,6 @@ const Footer = () => {
     { href: "#", icon: <Facebook size={16} /> },
   ];
 
-  const navigationLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/hotels", label: "Hotel" },
-    { href: "/trips", label: "Trip" },
-    { href: "/rent-a-cars", label: "Rent a car" },
-    { href: "/contack", label: "Contack" },
-  ];
 
   const instagramImages = Array.from({length:11}, (_,index) => `/instagram/${index + 1}.jpg`)
   return (
