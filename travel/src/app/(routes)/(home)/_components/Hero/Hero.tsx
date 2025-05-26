@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Image from "next/image";
+import MainSearch from "./MainSearch";
 
 const Hero = () => {
   const [currentSlide, setcurrentSlide] = useState(0);
@@ -60,6 +61,7 @@ const Hero = () => {
             ))}
           </Swiper>
         </div>
+        <MainSearch/>
       </div>
     </div>
   );
