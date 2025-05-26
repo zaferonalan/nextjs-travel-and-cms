@@ -1,11 +1,35 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from 'next/image'
 import React from 'react'
+
+const fadeInVariants = {
+  hidden: { y: -100, opacity: 0 },
+  visible: (index:number) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: index * 0.5, // Her resme 0.5 saniye gecikme ekleniyor
+      duration: 0.8,
+      ease: "easeOut",
+    }
+  }),
+}
 
 const SectionOne = () => {
   return (
     <div className='mx-auto container lg:mt-8 md:mt-[14rem] sm:mt-[20rem] mt-[25rem]'>
         <div className='flex flex-col md:flex-row gap-8 px-3 lg:px-28'>
-            <div className='group overflow-hidden relative'>
+            <motion.div 
+                className='group overflow-hidden relative'
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once:false, amount:0.4}}
+                transition={{delay:0.1}}
+                variants={fadeInVariants}
+                custom={0}
+            >
                 <Image
                     alt=''
                     src="/home/1.jpg"
@@ -13,8 +37,16 @@ const SectionOne = () => {
                     height={590}
                     className='rounded-xl transition-transform duration-300 group-hover:scale-110'
                 />
-            </div>
-            <div className='group overflow-hidden relative'>
+            </motion.div>
+            <motion.div 
+                className='group overflow-hidden relative'
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once:false, amount:0.4}}
+                transition={{delay:0.1}}
+                variants={fadeInVariants}
+                custom={1}
+            >
                 <Image
                     alt=''
                     src="/home/2.jpg"
@@ -22,7 +54,7 @@ const SectionOne = () => {
                     height={590}
                     className='rounded-xl transition-transform duration-300 group-hover:scale-110'
                 />
-            </div>
+            </motion.div>
         </div>
     </div>
   )
