@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
   	extend: {
+		backgroundImage:{
+			Herobg: "url('/slider/bgswipe.jpg')"
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
