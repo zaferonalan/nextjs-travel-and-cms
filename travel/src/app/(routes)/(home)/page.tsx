@@ -1,6 +1,7 @@
 import RecentProduct from "@/components/sections/recent/RecentProduct";
 import Hero from "./_components/Hero/Hero";
 import SectionOne from "./_components/Section/SectionOne";
+import SectionTwo from "./_components/Section/SectionTwo";
 
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
       <Hero/>
       <div className="min-h-48"></div>
       <SectionOne/>
-      <div className="min-h-96"></div>
+      <SectionTwo/>
+      <div className="min-h-20"></div>
       <RecentProduct/>
-      <div className="min-h-96"></div>
+      <div className="min-h-64"></div>
     </div>
   );
 }
