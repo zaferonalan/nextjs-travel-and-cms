@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <div>
       <Hero/>
-      <div className="min-h-48"></div>
+      <div className="min-h-24"></div>
       <SectionOne/>
       <SectionTwo/>
-      <div className="min-h-20"></div>
+      <div className="min-h-24"></div>
       <RecentProduct/>
       <div className="min-h-64"></div>
     </div>
