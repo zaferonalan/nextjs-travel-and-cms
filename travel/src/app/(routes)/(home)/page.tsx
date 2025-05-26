@@ -14,7 +14,6 @@ export default function Home() {
       <SectionTwo/>
       <div className="min-h-24"></div>
       <RecentProduct/>
-      <div className="min-h-64"></div>
     </div>
   );
 }

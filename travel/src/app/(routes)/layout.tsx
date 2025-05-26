@@ -13,6 +13,7 @@ const RouteLayout = ({children}: RouteLayoutProp) => {
         <div className='min-h-screen'>
             {children}
         </div>
+        <div className="min-h-64"></div>
         <Footer/>
     </div>
   )
