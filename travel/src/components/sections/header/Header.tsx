@@ -1,3 +1,4 @@
+"use client"
 import {
   Facebook,
   Instagram,
@@ -12,8 +13,12 @@ import React from "react";
 import { navigationLinks } from "../../../../constants/navigationLinks";
 import MobileMenu from "./MobileMenu";
 import SearchPage from "./Search";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+
+  const pathname = usePathname()
+
   const socialMedia = [
     { href: "#", icon: <Twitter size={16} /> },
     { href: "#", icon: <Instagram size={16} /> },
@@ -62,7 +67,7 @@ const Header = () => {
 
             <nav className="hidden lg:flex text-lg space-x-8 font-semibold">
               {navigationLinks.map((link, index) => (
-                <Link href={link.href} key={index} className="hover:text-orange-500">
+                <Link href={link.href} key={index} className={`${pathname === link.href ? "text-orange-500" : "hover:text-orange-600"}`}>
                   {link.label}
                 </Link>
               ))}
