@@ -4,7 +4,7 @@ export const navigationLinks = [
     { href: "/hotels", label: "Hotel" },
     { href: "/trips", label: "Trip" },
     { href: "/rent-a-cars", label: "Rent a car" },
-    { href: "/contack", label: "Contack" },
+    { href: "/contact", label: "Contact" },
   ]
 
   export const packages = [
